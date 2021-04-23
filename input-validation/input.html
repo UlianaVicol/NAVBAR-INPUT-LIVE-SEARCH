@@ -20,11 +20,11 @@
     </style>
         
     <label>
-        <input type="text" id="input_phone" placeholder="Phone Number.." onkeyup="inputAdjust()" onclick="inputAdjust()" onkeydown="inputAdjust('backspace')">
+        <input type="text" id="input_phone" placeholder="Phone Number.." onkeyup="inputAdjust()" onclick="inputAdjust()" onkeydown="inputAdjust('dl')">
     </label>
     
     <script>
-        function inputAdjust(backspace){
+        function inputAdjust(dl){
              let phone = input_phone.value
             phone = phone.trim()
             let lastC = phone[phone.length - 1]
@@ -41,7 +41,7 @@
                 phone = phone.substring(0, phone.length - 1) 
             }
         
-            if(event.key == "Backspace" && phone[phone.length-1] == "-" && backspace) {
+            if(event.key == "Backspace" && phone[phone.length-1] == "-" && dl) {
                 phone = phone.substring(0, phone.length - 1) 
             }
                 
