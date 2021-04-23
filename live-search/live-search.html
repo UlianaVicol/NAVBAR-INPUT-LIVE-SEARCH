@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Search</title>
+    <style>
+        body {
+            background-color: rgb(60, 188, 238);
+         
+        }
+        #input_search {
+     
+            padding: 1em;
+            background-color:rgb(255, 255, 255);
+            border: none;
+            border-radius: 5px;
+            color: rgb(51, 51, 51);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            outline: none;
+            padding-inline-end: 44px;
+            padding-inline-start: 52px;
+            position: relative;
+            width: 30%;
+            
+        }
+        #div_output {
+            color: white;
+            line-height: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            margin-top: 15px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <label>
+        <input type="text" id="input_search" placeholder="Search for names.. " onkeyup="search()">
+        <div id="div_output"></div>
+    </label>
+
+    <script>
+        let people = [
+            "Sofia",
+            "Alina",
+            "Maria",
+            "Darius",
+            "Damian",
+            "Larisa",
+            "Cristian"
+        ]
+        
+        function search() {
+            let fragment = input_search.value.trim().toUpperCase()
+            div_output.innerHTML = ``
+            for(let i = 0; i < people.length; i++) {
+                if(people[i].toUpperCase().startsWith(fragment) && fragment.length > 0) {
+                    div_output.innerHTML += `${people[i]}<br>`
+                }
+            }
+        }
+    </script>
+</body>
+</html>
