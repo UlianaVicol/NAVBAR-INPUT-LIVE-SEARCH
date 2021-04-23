@@ -1,0 +1,67 @@
+body {
+    background: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    background-color: rgb(248, 219, 182);
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em;
+}
+
+#navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#navbar a {
+    color: rgb(51, 51, 51);
+    font-size: 1.25em;
+    padding: .5em;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.toggler {
+    font-size: 1.8em;
+    color: rgb(122, 122, 122);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.toggler span {
+    font-size: 0.4em;
+    background-color: transparent;
+    color: rgb(20, 20, 20);
+    font-size: 20px;
+    position: relative;
+    bottom: 0.2em;
+    left: 0.1em;
+    
+    padding: 1px 3px;
+    border-radius: 100%;
+}
+
+#navDropDown{
+    position: absolute;
+    right: 0;
+    background-color: rgb(250, 217, 165);
+    width: 25%;
+}
+#navDropDown a {
+    color: rgb(49, 49, 49);
+    padding: 1.30em;
+    display: block;
+    border-top: 1px white solid;
+}
